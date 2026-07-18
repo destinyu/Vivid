@@ -1,4 +1,4 @@
-# Learn Agent
+# Vivid
 
 > 不是给你答案，是让你真正学会。
 
