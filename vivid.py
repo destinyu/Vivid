@@ -178,6 +178,12 @@ while True:
     if not user_input:
         continue
     if user_input.lower() in ("exit", "quit", "退出"):
+        # 退出前强制提炼剩余消息（避免短对话丢失）
+        if len(messages) > 1:
+            old_batch = messages[1:]  # system 之后的所有消息
+            extracted = extract_memory(old_batch)
+            if extracted:
+                merge_memory(memory, extracted)
         save_memory(memory)
         print("再会。")
         break
