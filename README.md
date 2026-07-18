@@ -1,40 +1,40 @@
 # Vivid
 
-> 想对一个领域做到"悟"，一定是需要深入的学习、训练与反思。Vivid 是你学习路上的契友。不是给你答案，是让你真正学会。
+> True mastery comes from deep learning, practice, and reflection. Vivid is your companion on the learning journey — not here to give you answers, but to help you truly understand.
 
-一个从 0 到 1 陪你学习任何知识的良师益友。通过对话式深度教学，把枯燥的知识变成你脑子里拿不走的东西。
-
----
-
-## 核心理念
-
-AI 的出现让学习变得更简单。但 AI 从来都不是只告诉你答案这么简单——只得到答案的人，并没有真正变聪明。
-
-我们需要的是站在 AI 的肩膀上。把那些枯燥、繁琐的知识，通过对话、深挖、一对一教学，变成活灵活现的记忆。
+[English](README.md) | [中文](README_zh.md)
 
 ---
 
-## 它做什么
+## Philosophy
 
-- **对话式深度教学** — 不是扔给你一篇文章。用苏格拉底式追问，让你自己推导出答案
-- **发现你没真懂的地方** — 你觉得自己理解了，它能找到真正的模糊点
-- **记住你是谁** — 上次用类比学得快？下次自动用类比。三天没来了？知道上次卡在哪
-- **学习地图** — 有材料就按你的材料教，没材料就帮你找最好的路径
+AI has made learning easier than ever. But AI should never be just about giving you answers — because someone who only gets answers hasn't actually become smarter.
 
----
-
-## 不是又一个 AI Chatbot
-
-Learn Agent 是一个真正的 **Agent 系统**——有自己的 tool_use 循环、上下文注入、工具编排。就像 Claude Code 能自己判断该读哪个文件、该跑哪个命令一样，Learn Agent 能自己判断该用哪个教学工具、该追问什么、该什么时候停下来考试。
+We need to stand on the shoulders of AI. Take the dull, tedious, overwhelming knowledge and transform it — through dialogue, deep inquiry, and one-on-one teaching — into vivid, unforgettable understanding.
 
 ---
 
-## 技术栈
+## What It Does
+
+- **Dialogic deep teaching** — Not a wall of text. Socratic questioning that guides you to discover answers yourself
+- **Finds what you don't really understand** — You think you've got it. Vivid finds the fuzzy edges
+- **Remembers who you are** — Learned fast with analogies last time? Uses analogies next time. Been away for three days? Knows exactly where you left off
+- **Learning map** — Bring your own materials or let Vivid build you the optimal path
+
+---
+
+## Not Just Another AI Chatbot
+
+Vivid is a true **Agent system** — with its own tool_use loop, context injection, and tool orchestration. Just as Claude Code decides which file to read or which command to run, Vivid decides which teaching tool to use, what follow-up question to ask, and when it's time for a quiz.
+
+---
+
+## Tech Stack
 
 Python · FastAPI · Claude API (tool_use) · SQLite
 
 ---
 
-## 状态
+## Status
 
-🚧 早期开发中。Agent 引擎搭建阶段。
+🚧 Early development. Building the agent engine.
