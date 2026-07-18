@@ -7,6 +7,7 @@ from openai import OpenAI
 
 load_dotenv()
 
+# ── 配置 ──
 MODEL = os.getenv("VIVID_MODEL", "deepseek-chat")
 API_KEY = os.getenv("VIVID_API_KEY", "")
 BASE_URL = os.getenv("VIVID_BASE_URL", "https://api.deepseek.com")
@@ -20,6 +21,7 @@ client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
 with open("personality.md", encoding="utf-8") as f:
     PERSONALITY = f.read()
 
+# ── 工具定义 ──
 TOOLS = [
     {
         "type": "function",
@@ -61,6 +63,8 @@ def execute_build_ladder(topic: str) -> str:
 
 
 print(f"\nVivid 已就绪 · 模型：{MODEL}\n")
+
+# ── 对话循环（Agent loop）──
 messages = [{"role": "system", "content": PERSONALITY}]
 
 while True:
@@ -81,6 +85,7 @@ while True:
 
     assistant_msg = response.choices[0].message
 
+    # 模型要求调工具 → 执行 → 结果喂回去 → 再次生成回复
     if assistant_msg.tool_calls:
         if assistant_msg.content:
             print(f"Vivid: {assistant_msg.content}")
